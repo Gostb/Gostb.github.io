@@ -1,0 +1,72 @@
+.player {
+	opacity: 0;
+	display: grid;
+	grid-template-columns: 200px 300px;
+	grid-template-rows: repeat(3);
+
+	&__img {
+		grid-column-start: 1; 
+		grid-column-end: 2; 
+		grid-row-start: 1; 
+		grid-row-end: 3; 
+		background: $main;
+		img {
+			display: grid;
+		}
+	}
+	&__nick {
+		grid-column-start: 2; 
+		grid-column-end: 3; 
+		grid-row-start: 2; 
+		grid-row-end: 3;
+		color: $main;
+		align-items: end;
+		background: $green;
+		text-transform: uppercase;
+		padding: 4px 25px;
+		font-size: 36px;
+		line-height: 42px;
+		border: 1px solid $black;
+		position: relative;
+		overflow: hidden;
+		white-space: nowrap;
+		&:before {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 4px;
+			background: $orange;
+			border: 1px solid $black;
+		}
+	}
+	&__nick-text {
+		position: relative;
+		display: inline-block;
+	}
+	&__socials {
+		border: 1px solid transparent;
+		padding: 0 30px;
+		grid-column-start: 1; 
+		grid-column-end: 3; 
+		grid-row-start: 3; 
+		grid-row-end: 4;
+		background: $main;
+		color: $white;
+		font-size: 36px;
+		line-height: 90px;
+		overflow: hidden;
+		white-space: nowrap;
+		span {
+			margin-right: 20px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	&__socials-text {
+		position: relative;
+		display: inline-block;
+	}
+}
